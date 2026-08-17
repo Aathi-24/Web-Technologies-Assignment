@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ABC College of Engineering</h1>
+        <p>Student Admission Portal</p>
+    </header>
+    <main class="container">
+        <div class="form-header">
+            <h2>Student Admission Form</h2>
+            <p>Please fill in the details below to apply for admission.</p>
+        </div>
+        <form>
+            <section>
+                <h3>Personal Information</h3>
+                <div class="row">
+                    <div class="field">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="field">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="example@gmail.com" required>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Mobile Number</label>
+                        <input type="tel" id="phone" placeholder="Enter mobile number" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Gender</label>
+                    <div class="options">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label><input type="radio" name="gender" value="other"> Other</label>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Academic Information</h3>
+                <div class="row">
+                    <div class="field">
+                        <label for="course">Preferred Course</label>
+                        <select id="course" required>
+                            <option value="">Select Course</option>
+                            <option>Computer Science and Engineering</option>
+                            <option>Information Technology</option>
+                            <option>Electronics and Communication Engineering</option>
+                            <option>Electrical and Electronics Engineering</option>
+                            <option>Mechanical Engineering</option>
+                            <option>Civil Engineering</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="qualification">Qualification</label>
+                        <select id="qualification" required>
+                            <option value="">Select Qualification</option>
+                            <option>Higher Secondary</option>
+                            <option>Diploma</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <label for="percentage">Percentage / CGPA</label>
+                        <input type="number" id="percentage" step="0.01" placeholder="Enter percentage or CGPA">
+                    </div>
+                    <div class="field">
+                        <label for="year">Passing Year</label>
+                        <input type="number" id="year" min="2000" max="2030" placeholder="2026">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Address Details</h3>
+                <div class="field">
+                    <label for="address">Permanent Address</label>
+                    <textarea id="address" rows="4" placeholder="Enter your complete address"></textarea>
+                </div>
+                <div class="row">
+                    <div class="field">
+                        <label for="city">City</label>
+                        <input type="text" id="city" placeholder="Enter city">
+                    </div>
+                    <div class="field">
+                        <label for="pincode">Pincode</label>
+                        <input type="number" id="pincode" placeholder="Enter pincode">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Additional Information</h3>
+                <div class="field">
+                    <label>Areas of Interest</label>
+                    <div class="options">
+                        <label><input type="checkbox" name="interest"> Coding</label>
+                        <label><input type="checkbox" name="interest"> Sports</label>
+                        <label><input type="checkbox" name="interest"> Music</label>
+                        <label><input type="checkbox" name="interest"> Research</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="website">Portfolio Website</label>
+                    <input type="url" id="website" placeholder="https://example.com">
+                </div>
+                <div class="field">
+                    <label for="comments">Additional Comments</label>
+                    <textarea id="comments" rows="4" placeholder="Enter any additional information"></textarea>
+                </div>
+            </section>
+            <div class="agreement">
+                <label>
+                    <input type="checkbox" required>
+                    I confirm that the information provided above is correct.
+                </label>
+            </div>
+            <div class="buttons">
+                <button type="submit">Submit Application</button>
+                <button type="reset" class="reset">Reset Form</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>© 2026 ABC College of Engineering | Student Admission Portal</p>
+    </footer>
+</body>
+</html>

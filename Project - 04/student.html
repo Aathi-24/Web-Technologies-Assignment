@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">GradeCalc</div>
+        <p>Student Grade Management System</p>
+    </header>
+    <main class="container">
+        <div class="title">
+            <h1>Student Grade Calculator</h1>
+            <p>Enter the marks of five subjects to calculate the result.</p>
+        </div>
+        <div class="card">
+            <h2>Student Information</h2>
+            <div class="student-info">
+                <div>
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" placeholder="Enter student name">
+                </div>
+                <div>
+                    <label for="rollNumber">Roll Number</label>
+                    <input type="text" id="rollNumber" placeholder="Enter roll number">
+                </div>
+            </div>
+            <h2>Subject Marks</h2>
+            <div class="subjects">
+                <div class="subject">
+                    <label for="subject1">Mathematics</label>
+                    <input type="number" id="subject1" min="0" max="100" placeholder="0 - 100">
+                </div>
+                <div class="subject">
+                    <label for="subject2">Physics</label>
+                    <input type="number" id="subject2" min="0" max="100" placeholder="0 - 100">
+                </div>
+                <div class="subject">
+                    <label for="subject3">Chemistry</label>
+                    <input type="number" id="subject3" min="0" max="100" placeholder="0 - 100">
+                </div>
+                <div class="subject">
+                    <label for="subject4">Computer Science</label>
+                    <input type="number" id="subject4" min="0" max="100" placeholder="0 - 100">
+                </div>
+                <div class="subject">
+                    <label for="subject5">English</label>
+                    <input type="number" id="subject5" min="0" max="100" placeholder="0 - 100">
+                </div>
+            </div>
+            <div id="error"></div>
+            <div class="buttons">
+                <button onclick="calculateResult()">Calculate Result</button>
+                <button class="reset" onclick="resetForm()">Reset</button>
+            </div>
+        </div>
+        <div class="result-card" id="result">
+            <h2>Result Summary</h2>
+            <div class="student-result">
+                <p>Student: <strong id="resultName">-</strong></p>
+                <p>Roll Number: <strong id="resultRoll">-</strong></p>
+            </div>
+            <div class="result-container">
+                <div class="result-box">
+                    <span>Total</span>
+                    <strong id="total">0</strong>
+                    <small>/ 500</small>
+                </div>
+                <div class="result-box">
+                    <span>Average</span>
+                    <strong id="average">0</strong>
+                    <small>%</small>
+                </div>
+                <div class="result-box">
+                    <span>Grade</span>
+                    <strong id="grade">-</strong>
+                </div>
+                <div class="result-box status-box">
+                    <span>Status</span>
+                    <strong id="status">-</strong>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Student Grade Calculator | JavaScript Application</p>
+    </footer>
+    <script src="grade.js"></script>
+</body>
+</html>
